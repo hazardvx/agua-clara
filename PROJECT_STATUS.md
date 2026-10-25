@@ -29,6 +29,13 @@
 - Repartidor demo: acceso rápido, entregas e historial probados; navegación funcional y sin errores de consola ni solicitudes fallidas.
 - La persistencia entre roles pertenece al mismo `localStorage` del navegador en modo demo. No equivale todavía a un backend multiusuario: para operación real debe conectarse Supabase y aplicar las migraciones existentes.
 
+### Demo publicada — 2026-10-25
+
+- Repositorio público: `https://github.com/hazardvx/agua-clara`.
+- GitHub Pages activa en `https://hazardvx.github.io/agua-clara/`.
+- Verificación remota: la pantalla inicial de login y los tres accesos demo cargan en `390×844`, sin errores de consola.
+- Esta publicación es una demo estática; todavía no sincroniza pedidos entre dispositivos.
+
 ---
 
 ## 1. Objetivo del proyecto
