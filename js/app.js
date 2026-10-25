@@ -106,7 +106,7 @@ window.addEventListener('online', () => renderApp());
 window.addEventListener('offline', () => renderApp());
 
 // Registrar service worker
-if ('serviceWorker' in navigator && !location.hostname.endsWith('github.io')) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register(new URL('sw.js', document.baseURI)).catch(err => {
     console.warn('Service Worker no registrado:', err);
   });

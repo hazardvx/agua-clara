@@ -4,24 +4,13 @@
  * No cachea datos personales ni pagos.
  */
 
-const CACHE_NAME = 'agua-clara-v9';
+const CACHE_NAME = 'agua-clara-v10';
+const BASE_PATH = new URL('./', self.registration.scope).pathname;
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/js/app.js',
-  '/js/store.js',
-  '/js/router.js',
-  '/js/ui.js',
-  '/js/views/cliente.js',
-  '/js/views/admin.js',
-  '/js/views/repartidor.js',
-  '/manifest.json',
-  '/icons/favicon.svg',
-  '/img/aquaviva.jpg',
-  '/img/cristalina.jpg',
-  '/img/purissima.jpg',
-];
+  '', 'index.html', 'styles.css', 'js/app.js', 'js/store.js', 'js/router.js', 'js/ui.js',
+  'js/views/cliente.js', 'js/views/admin.js', 'js/views/repartidor.js', 'manifest.json',
+  'icons/favicon.svg', 'img/aquaviva.jpg', 'img/cristalina.jpg', 'img/purissima.jpg',
+].map(file => `${BASE_PATH}${file}`);
 
 // Instalar: cachear recursos estáticos
 self.addEventListener('install', (event) => {
@@ -91,7 +80,7 @@ function fetchFirst(request) {
     })
     .catch(() =>
       caches.match(request).then(cached =>
-        cached || (request.destination === 'document' ? caches.match('/index.html') : null)
+        cached || (request.destination === 'document' ? caches.match(`${BASE_PATH}index.html`) : null)
       ).then(r => r || new Response('Sin conexión', { status: 503, statusText: 'Sin conexión' }))
     );
 }
