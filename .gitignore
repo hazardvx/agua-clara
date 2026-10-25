@@ -1,0 +1,8 @@
+node_modules/
+.env
+.playwright-mcp/
+test-results/
+playwright-report/
+_v2-*.png
+_verify2.cjs
+.DS_Store

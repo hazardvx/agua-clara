@@ -1,0 +1,28 @@
+{
+  "name": "Agua Clara — Agua purificada a domicilio",
+  "short_name": "Agua Clara",
+  "description": "Pide agua purificada en botellones de 5 galones y recíbela en tu casa.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f0f9ff",
+  "theme_color": "#075985",
+  "lang": "es",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["business", "shopping"],
+  "screenshots": []
+}

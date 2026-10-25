@@ -1,0 +1,15 @@
+agua.example.com {
+  root * /opt/agua-clara
+  encode gzip
+  header {
+    X-Content-Type-Options nosniff
+    X-Frame-Options DENY
+    Referrer-Policy strict-origin-when-cross-origin
+    Permissions-Policy "geolocation=(self)"
+    Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Content-Security-Policy "default-src 'self'; connect-src 'self' https://*.supabase.co; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+  }
+  @nocache path / /index.html /sw.js /js/*
+  header @nocache Cache-Control "no-cache"
+  file_server
+}
